@@ -1,0 +1,11 @@
+<button (click)="markAllTodosAsCompeted()">Mark all as completed</button>
+<div *ngFor="let todo of todos">
+    <span>
+        {{todo.title}}
+    </span>
+
+    <button (click)="handleCompleteStateChange(todo)">
+        {{todo.isCompleted ? 'Mark as not completed':'Mark as completed'}}
+    </button>
+
+</div>
