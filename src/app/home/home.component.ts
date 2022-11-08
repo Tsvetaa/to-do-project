@@ -29,12 +29,14 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
-
   markAllTodosAsCompeted(): void {
     for (const todo of this.todos) {
       todo.isCompleted = true; 
     }
+  }
+
+  handleStateChange(todoToChange: Todo): void {
+    todoToChange.isCompleted = !todoToChange.isCompleted;
   }
 
 }
