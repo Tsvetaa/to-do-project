@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Todo } from '../todo-item/todo-item.component'
 
-interface Todo {
-  title: string;
-  isCompleted: boolean;
-}
 
 @Component({
   selector: 'app-home',
@@ -32,10 +29,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  handleCompleteStateChange(todoToChnage: Todo): void {
-    todoToChnage.isCompleted = !todoToChnage.isCompleted
 
-  }
 
   markAllTodosAsCompeted(): void {
     for (const todo of this.todos) {
